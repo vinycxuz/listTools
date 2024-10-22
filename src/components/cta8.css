@@ -1,0 +1,27 @@
+.cta8-container2 {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta8-content {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta8-text3 {
+  display: inline-block;
+}
+.cta8-text4 {
+  display: inline-block;
+}
+@media(max-width: 991px) {
+  .cta8-container2 {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
