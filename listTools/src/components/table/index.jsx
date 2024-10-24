@@ -17,12 +17,14 @@ const Table = () => {
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -33,6 +35,9 @@ const Table = () => {
         <Button text="Design/UIUX" onClick={() => { setSelectedCategory("designUIUX"); setCurrentPage(1); }} />
         <Button text="Audio/Video" onClick={() => { setSelectedCategory("audioVideo"); setCurrentPage(1); }} />
         <Button text="Text Document" onClick={() => { setSelectedCategory("textDocument"); setCurrentPage(1); }} />
+      </div>
+      <div>
+        <p className="font-mono py-0 text-center p-4 text-[#e5e7eb]">{selectedCategory}</p>
       </div>
       <table className="w-3/4 text-left font-mono m-8 border-none">
         <thead className="uppercase bg-[#171717] text-[#e5e7eb]" style={{ backgroundColor: '#171717', color: '#e5e7eb' }}>
