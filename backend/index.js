@@ -19,6 +19,20 @@ mongoose.connect(process.env.STRING_CONNECTION, {
 
 app.use('/api', toolsRouter); // Usar as rotas importadas
 
+app.get('/api/emails', async (req, res) => {
+  const apiKey = process.env.API_KEY_EMAIL;
+  const namespace = process.env.NAMESPACE_EMAIL;
+  const endpoint = `https://api.testmail.app/api/json?apikey=${apiKey}&namespace=${namespace}&pretty=true`;
+
+  try {
+    const response = await axios.get(endpoint);
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching emails:', error);
+    res.status(500).json({ message: 'Error fetching emails' });
+  }
+});
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });

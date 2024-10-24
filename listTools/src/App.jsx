@@ -5,11 +5,11 @@ import Footer from './components/footer'
 
 function App() {
   return (
-    <>
+    <div className="bg-[#171717] min-h-screen">
       <Header />
       <Table />
       <Footer />
-    </>
+    </div>
   )
 }
 
