@@ -1,18 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import ItemTable from "./itemTable";
-import { list } from "../../utils/list";
 import Button from "../button";
+import { FaSortAlphaUp } from "react-icons/fa";
 
 const Table = () => {
   const [selectedCategory, setSelectedCategory] = useState("development");
   const [currentPage, setCurrentPage] = useState(1);
+  const [tools, setTools] = useState([]);
+  const [isSorted, setIsSorted] = useState(false);
   const itemsPerPage = 10;
 
-  const filteredList = list.filter(item => item.category === selectedCategory);
-  const totalPages = Math.ceil(filteredList.length / itemsPerPage);
+  useEffect(() => {
+    const fetchTools = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/tools");
+        setTools(response.data);
+      } catch (error) {
+        console.error("Error fetching tools:", error);
+      }
+    };
+
+    fetchTools();
+  }, []);
+
+  const filteredList = tools.filter(item => item.category === selectedCategory);
+  const sortedList = isSorted ? [...filteredList].sort((a, b) => a.tool.name.localeCompare(b.tool.name)) : filteredList;
+  const totalPages = Math.ceil(sortedList.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentItems = filteredList.slice(startIndex, endIndex);
+  const currentItems = sortedList.slice(startIndex, endIndex);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -28,6 +45,10 @@ const Table = () => {
     }
   };
 
+  const handleSort = () => {
+    setIsSorted(!isSorted);
+  };
+
   return (
     <div className="flex flex-col items-center min-h-screen">
       <div className="mb-4">
@@ -36,13 +57,14 @@ const Table = () => {
         <Button text="Audio/Video" onClick={() => { setSelectedCategory("audioVideo"); setCurrentPage(1); }} />
         <Button text="Text Document" onClick={() => { setSelectedCategory("textDocument"); setCurrentPage(1); }} />
       </div>
-      <div>
+      
+      <div className="flex">
         <p className="font-mono py-0 text-center p-4 text-[#e5e7eb]">{selectedCategory}</p>
       </div>
       <table className="w-3/4 text-left font-mono m-8 border-none">
         <thead className="uppercase bg-[#171717] text-[#e5e7eb]" style={{ backgroundColor: '#171717', color: '#e5e7eb' }}>
           <tr>
-            <th className="py-0 text-center p-4 w-1/3 border border-gray-300">Tool</th>
+            <th className="py-0 text-center p-4 w-1/3 border border-gray-300">Tool<Button text={<FaSortAlphaUp />} onClick={handleSort} /></th>
             <th className="py-0 text-center p-4 w-1/3 border border-gray-300">Description</th>
           </tr>
         </thead>

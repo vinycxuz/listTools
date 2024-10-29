@@ -1,14 +1,27 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const toolsRouter = require('./database/routes/tools.route'); // Importar o arquivo de rotas
+const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const path = require('path');
 
 dotenv.config();
 
-const app = express();
+const app = express(); // Mover a definição do app para o início
 const port = process.env.PORT || 3000;
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutos
+  max: 100, // Limite de 100 requisições por janela de tempo
+});
+app.use(limiter);
+
+const toolsRouter = require('./database/routes/tools.route'); 
+
 app.use(express.json());
+
+app.use(cors());
 
 mongoose.connect(process.env.STRING_CONNECTION, {
   useNewUrlParser: true,
@@ -19,7 +32,13 @@ mongoose.connect(process.env.STRING_CONNECTION, {
 
 app.use('/api', toolsRouter); // Usar as rotas importadas
 
-app.get('/api/emails', async (req, res) => {
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+});
+
+/*app.get('/api/emails', async (req, res) => {
   const apiKey = process.env.API_KEY_EMAIL;
   const namespace = process.env.NAMESPACE_EMAIL;
   const endpoint = `https://api.testmail.app/api/json?apikey=${apiKey}&namespace=${namespace}&pretty=true`;
@@ -32,6 +51,7 @@ app.get('/api/emails', async (req, res) => {
     res.status(500).json({ message: 'Error fetching emails' });
   }
 });
+*/
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -40,3 +60,17 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+/* app.use(helmet()); 
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"], 
+      scriptSrc: ["'self'", "'unsafe-inline'"], 
+      objectSrc: ["'none'"], 
+      upgradeInsecureRequests: [], 
+    },
+  })
+);
+*/

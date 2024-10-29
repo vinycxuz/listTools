@@ -662,5 +662,325 @@ export const list = [
         "link": "https://www.slickwrite.com/",
         "description": "Ferramenta de correção de gramática e estilo, assistida por IA."
       }
-    }  
+    },
+      {
+        "category": "development",
+        "tool": {
+          "name": "FastAI",
+          "link": "https://fast.ai/",
+          "description": "Biblioteca de deep learning que simplifica o treinamento de modelos de última geração com práticas modernas."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "JAX",
+          "link": "https://github.com/google/jax",
+          "description": "Biblioteca do Google para transformação automática de diferenciação e computação numérica."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Ludwig",
+          "link": "https://ludwig.ai/",
+          "description": "Framework de automação de ML da Uber que permite treinar e testar modelos sem código."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "PaddlePaddle",
+          "link": "https://www.paddlepaddle.org.cn/",
+          "description": "Framework de deep learning desenvolvido pela Baidu, com foco em eficiência e escalabilidade."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Ray",
+          "link": "https://www.ray.io/",
+          "description": "Framework para escalar aplicações de IA e ML, oferecendo computação distribuída eficiente."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Optuna",
+          "link": "https://optuna.org/",
+          "description": "Framework de otimização hyperparameter automática para ML, desenvolvido pela Preferred Networks."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "MLflow",
+          "link": "https://mlflow.org/",
+          "description": "Plataforma open source para gerenciar o ciclo de vida completo de ML, incluindo experimentação e deploy."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Streamlit",
+          "link": "https://streamlit.io/",
+          "description": "Framework que permite criar aplicações web para ML e ciência de dados com Python puro."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Weights & Biases",
+          "link": "https://wandb.ai/",
+          "description": "Plataforma para rastrear experimentos de ML, gerenciar datasets e colaborar em projetos."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Gradio",
+          "link": "https://gradio.app/",
+          "description": "Biblioteca para criar interfaces web para modelos de ML com poucas linhas de código."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Midjourney",
+          "link": "https://www.midjourney.com/",
+          "description": "Ferramenta de geração de imagens por IA que cria ilustrações artísticas a partir de descrições textuais."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Remove.bg",
+          "link": "https://www.remove.bg/",
+          "description": "Ferramenta especializada em remover fundos de imagens automaticamente usando IA."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Stable Diffusion",
+          "link": "https://stability.ai/",
+          "description": "Modelo de geração de imagens open source que pode ser executado localmente ou na nuvem."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Scenario",
+          "link": "https://www.scenario.com/",
+          "description": "Plataforma de geração de assets para jogos usando IA, criando texturas e modelos 3D."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Interior AI",
+          "link": "https://interiorai.com/",
+          "description": "Ferramenta de design de interiores que usa IA para gerar visualizações de ambientes."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Vizcom",
+          "link": "https://www.vizcom.ai/",
+          "description": "Transforma sketches em renderizações profissionais usando IA para designers de produto."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Dimensions",
+          "link": "https://www.dimensions.ink/",
+          "description": "Ferramenta de IA para criar e editar ilustrações vetoriais a partir de descrições."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "GetFloorPlan",
+          "link": "https://getfloorplan.com/",
+          "description": "Converte plantas baixas desenhadas à mão em visualizações 3D profissionais usando IA."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Wombo Dream",
+          "link": "https://www.wombo.art/",
+          "description": "App que transforma textos em obras de arte usando diferentes estilos artísticos."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Photoroom",
+          "link": "https://www.photoroom.com/",
+          "description": "Studio de edição de fotos com IA para criar imagens profissionais para e-commerce."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Mubert",
+          "link": "https://mubert.com/",
+          "description": "Gerador de música adaptativa baseado em IA que cria trilhas sonoras personalizadas em tempo real."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Cleanvoice",
+          "link": "https://cleanvoice.ai/",
+          "description": "Software que remove automaticamente ruídos, pausas e sons indesejados de gravações de áudio."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Beatoven.ai",
+          "link": "https://www.beatoven.ai/",
+          "description": "Cria música livre de royalties personalizada usando IA para diferentes tipos de conteúdo."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Papercup",
+          "link": "https://www.papercup.com/",
+          "description": "Tradução automática de vídeos com vozes sintetizadas naturais em múltiplos idiomas."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Resemble.ai",
+          "link": "https://www.resemble.ai/",
+          "description": "Plataforma de clonagem de voz que gera falas realistas para diferentes aplicações."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Altered",
+          "link": "https://www.altered.ai/",
+          "description": "Modificador de voz em tempo real que permite alterar características vocais mantendo naturalidade."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Audoir",
+          "link": "https://audoir.com/",
+          "description": "Ferramenta de masterização automática que otimiza a qualidade do áudio usando IA."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Colourlab.ai",
+          "link": "https://colourlab.ai/",
+          "description": "Software de correção de cor automática para vídeos usando inteligência artificial."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "D-ID",
+          "link": "https://www.d-id.com/",
+          "description": "Criador de avatares digitais falantes a partir de imagens estáticas usando IA."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Voicemod",
+          "link": "https://www.voicemod.net/",
+          "description": "Modificador de voz em tempo real com IA para streaming e comunicação online."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Notion AI",
+          "link": "https://www.notion.so/product/ai",
+          "description": "Assistente de escrita integrado ao Notion que ajuda a brainstorming, resumir e editar textos."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Otter.ai",
+          "link": "https://otter.ai/",
+          "description": "Ferramenta de transcrição e análise de reuniões em tempo real com IA avançada."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Rytr",
+          "link": "https://rytr.me/",
+          "description": "Plataforma de escrita com IA especializada em criar conteúdo otimizado para diferentes formatos."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Moonbeam",
+          "link": "https://www.gomoonbeam.com/",
+          "description": "Assistente de escrita focado em conteúdo longo como artigos e blogs usando IA."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Scribbly",
+          "link": "https://www.scribbly.ai/",
+          "description": "Editor de texto inteligente que sugere melhorias de estilo e clareza em tempo real."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Summari",
+          "link": "https://www.summari.com/",
+          "description": "Ferramenta especializada em criar resumos concisos e precisos de textos longos."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Textmetrics",
+          "link": "https://textmetrics.com/",
+          "description": "Plataforma que otimiza textos para melhor legibilidade e SEO usando análise de IA."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Glasp",
+          "link": "https://glasp.co/",
+          "description": "Highlighter social com IA que organiza e compartilha destaques de textos automaticamente."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Text Blaze",
+          "link": "https://blaze.today/",
+          "description": "Automatiza a criação de textos repetitivos com templates inteligentes e IA."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "Elephas",
+          "link": "https://elephas.app/",
+          "description": "Assistente de escrita que se integra ao sistema operacional para ajudar em qualquer aplicativo."
+        }
+      }
 ]
