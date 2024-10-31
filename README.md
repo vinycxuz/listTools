@@ -1,6 +1,8 @@
 # ListTools
 
-Site com o intuito de facilitara pesquisa de ferramentas AI.
+Site com o intuito de facilitar a pesquisa de ferramentas AI.
+
+é também um teste, foi desenvolvido inteiro com engenharia de prompt usando github copilot com gpt 4.0
 
 Você pode pesquisar as feramentas pel descrição ou nome e é filtrado pelas seguintes características:
 
