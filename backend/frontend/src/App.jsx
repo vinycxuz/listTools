@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Banner
         title="List of Tools"
-        description="Melhores ferramentas IA para desenvolvimento, design, áudio, vídeo e documentos de texto."
+        description="Melhores ferramentas com IA para desenvolvimento, design, áudio, vídeo e documentos"
       />
       <Table />
       <Footer />

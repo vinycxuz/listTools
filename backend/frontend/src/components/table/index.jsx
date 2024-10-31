@@ -9,6 +9,7 @@ const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [tools, setTools] = useState([]);
   const [isSorted, setIsSorted] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -24,7 +25,13 @@ const Table = () => {
     fetchTools();
   }, []);
 
-  const filteredList = tools.filter(item => item.category === selectedCategory);
+  const filteredList = tools.filter(item => 
+    item.category === selectedCategory &&
+    (item.tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+     item.tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+     item.tool.link.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
   const sortedList = isSorted ? [...filteredList].sort((a, b) => a.tool.name.localeCompare(b.tool.name)) : filteredList;
   const totalPages = Math.ceil(sortedList.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -51,6 +58,13 @@ const Table = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
+      <input 
+        type="text" 
+        placeholder="Search..." 
+        value={searchTerm} 
+        onChange={(e) => setSearchTerm(e.target.value)} 
+        className="mb-4 p-2 font-mono border border-gray-300 rounded-[5px] bg-[#171717] text-[#e5e7eb]"
+      />
       <div className="mb-4">
         <Button text="Development" onClick={() => { setSelectedCategory("development"); setCurrentPage(1); }} />
         <Button text="Design/UIUX" onClick={() => { setSelectedCategory("designUIUX"); setCurrentPage(1); }} />
@@ -61,6 +75,8 @@ const Table = () => {
       <div className="flex">
         <p className="font-mono py-0 text-center p-4 text-[#e5e7eb]">{selectedCategory}</p>
       </div>
+      
+      
       <table className="w-3/4 text-left font-mono m-8 border-none">
         <thead className="uppercase bg-[#171717] text-[#e5e7eb]" style={{ backgroundColor: '#171717', color: '#e5e7eb' }}>
           <tr>

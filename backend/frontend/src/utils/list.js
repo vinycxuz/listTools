@@ -982,5 +982,101 @@ export const list = [
           "link": "https://elephas.app/",
           "description": "Assistente de escrita que se integra ao sistema operacional para ajudar em qualquer aplicativo."
         }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Neptune.ai",
+          "link": "https://neptune.ai/",
+          "description": "Plataforma para rastreamento e gerenciamento de experimentos de machine learning."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "ClearML",
+          "link": "https://clear.ml/",
+          "description": "Plataforma open-source para gerenciamento de experimentos, pipelines e deploy de modelos."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Artisto",
+          "link": "https://artisto.my.com/",
+          "description": "Aplicativo de edição de vídeo que transforma vídeos em obras de arte usando IA."
+        }
+      },
+      {
+        "category": "audioVideo",
+        "tool": {
+          "name": "Auphonic",
+          "link": "https://auphonic.com/",
+          "description": "Serviço de pós-produção de áudio que melhora automaticamente a qualidade do som."
+        }
+      },
+      {
+        "category": "textDocument",
+        "tool": {
+          "name": "AI Dungeon",
+          "link": "https://play.aidungeon.io/",
+          "description": "Jogo de aventura interativo que usa IA para criar histórias dinâmicas e personalizadas."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "TabNine",
+          "link": "https://www.tabnine.com/",
+          "description": "Assistente de código AI que ajuda a completar código em tempo real."
+        }
+      },
+      {
+        "category": "designUIUX",
+        "tool": {
+          "name": "Runway",
+          "link": "https://runwayml.com/",
+          "description": "Plataforma de criação de conteúdo multimídia com ferramentas de IA."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "DeepCode",
+          "link": "https://www.deepcode.ai/",
+          "description": "Ferramenta de análise de código que usa IA para encontrar bugs e vulnerabilidades."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "CodeT5",
+          "link": "https://github.com/salesforce/CodeT5",
+          "description": "Modelo de linguagem para código que ajuda na compreensão e geração de código."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "DeepTabNine",
+          "link": "https://www.tabnine.com/",
+          "description": "Assistente de código AI que ajuda a completar código em tempo real."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "OpenAI Codex",
+          "link": "https://openai.com/research/codex",
+          "description": "Modelo de linguagem que traduz linguagem natural para código, facilitando o desenvolvimento de software."
+        }
+      },
+      {
+        "category": "development",
+        "tool": {
+          "name": "Google Vertex AI",
+          "link": "https://cloud.google.com/vertex-ai",
+          "description": "Plataforma de machine learning da Google que oferece ferramentas para construir, treinar e implantar modelos de IA."
+        }
       }
 ]
