@@ -44,7 +44,7 @@ STRING_CONNECTION=<SUA_STRING_DE_CONEXAO_MONGODB>
 API_KEY_EMAIL=<SUA_API_KEY_EMAIL>
 NAMESPACE_EMAIL=<SEU_NAMESPACE_EMAIL>
 
-##Scripts Disponíveis
+## Scripts Disponíveis
 
 ## Backend
 npm start: Inicia o servidor backend.
