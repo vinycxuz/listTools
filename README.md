@@ -46,14 +46,14 @@ NAMESPACE_EMAIL=<SEU_NAMESPACE_EMAIL>
 
 ## Scripts Disponíveis
 
-## Backend
-npm start: Inicia o servidor backend.
-npm run server: Inicia o servidor backend com nodemon.
-npm run client: Inicia o frontend usando Vite.
-npm run dev: Inicia o backend e o frontend simultaneamente.
+### Backend
+- npm start: Inicia o servidor backend.
+- npm run server: Inicia o servidor backend com nodemon.
+- npm run client: Inicia o frontend usando Vite.
+- npm run dev: Inicia o backend e o frontend simultaneamente.
 
-## Frontend
-npm run dev: Inicia o servidor de desenvolvimento do Vite.
-npm run build: Cria o build de produção.
-npm run lint: Executa o linter.
-npm run preview: Pré-visualiza o build de produção.
+### Frontend
+- npm run dev: Inicia o servidor de desenvolvimento do Vite.
+- npm run build: Cria o build de produção.
+- npm run lint: Executa o linter.
+- npm run preview: Pré-visualiza o build de produção.
